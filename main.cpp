@@ -15,7 +15,7 @@ using namespace std;
 int main() 
 { 
   string yesno = "t";  //JZ - user input variable
-  int x = 0;
+  int x = 0, f=0;
 
 cout << "How many fish?";
   cin >> f;
@@ -38,7 +38,7 @@ cout << "How many fish?";
       }
       yesno = "+";
     }
-  cout << "Hello World!\n";
+
 
   return 0;
 }

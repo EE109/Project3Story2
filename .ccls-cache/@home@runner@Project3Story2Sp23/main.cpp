@@ -1,27 +1,44 @@
+/******************************************************
+* Alabama A&M - EE109 - Spring 2023
+* Project 3 Story 2 Template
+* 26 January 2023
+* By: Prof J Zehnpfennig, PE
+* This code starts building the P3S2 code.  It integrates
+* and demonstrates iterative looping.
+******************************************************/  
+
 #include <iostream>
 #include <string>
 
-using namespace std; //JZ - specifying namespace here saves us from having to explicitly invoke 'std' for each standard keyword
-
+using namespace std;
 
 int main() 
-{
-  string yesno = "#";  //JZ - sting or char will do the trick - using string here in order to limit looping and repitition of instructions.  We set the initial value to something that causes the 'while' conditional loop below to be true.  
-  int x = 0, f = 
-  //JZ - instruct and wait for cook to get the pot
-    while (yesno != "y" && yesno != "Y") //JZ - this line says: "while the value of yesno is not equal to lower-case y and yesno is not equal to Y run the following code within the {}"
-      {
-          cout << "Go to the rack and get a 6L pot.\nPress 'y' then <Enter> when complete.\n"; //JZ - instructions for the user
-          cin >> yesno; //JZ - collect user input
-      }
-  yesno = "#"; //JZ - resetting yesno to something that will make the following while loop conditions true so that the loop executes
+{ 
+  string yesno = "t";  //JZ - user input variable
+  int x = 0, f=0;
 
-  while (yesno != "y" && yesno != "Y") //JZ - reusing the loop logic
+cout << "How many fish?";
+  cin >> f;
+  
+  for (x = 0; x < 4; x++)
+    {
+    while ( yesno != "y" && yesno != "Y" )
       {
-          cout << "Fill the pot with 2L water.\nPress 'y' then <Enter> when complete.\n"; //JZ - instructions for the user
-          cin >> yesno; //JZ - collect user input
+        cout << "\nPlace bait on the line.\nPress 'y' then <Enter> when done.\n";
+        cin >> yesno;
       }
-  yesno = "#"; //JZ - resetting yesno 
-  
-  
+      yesno = "+";
+    
+    //Add the parts about catching and reeling the fish in.
+    
+    while ( yesno != "y" && yesno != "Y" )
+      {
+        cout << "\nRemove fish from the line.\nPress 'y' then <Enter> when done.\n";
+        cin >> yesno;
+      }
+      yesno = "+";
+    }
+
+
+  return 0;
 }
