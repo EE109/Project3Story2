@@ -15,12 +15,12 @@ using namespace std;
 int main() 
 { 
   string yesno = "t";  //JZ - user input variable
-  int x = 0, f=0;
+  int x = 0, f = 0;
 
 cout << "How many fish?";
   cin >> f;
   
-  for (x = 0; x < 4; x++)
+  for (x = 0; x < f; x++)
     {
     while ( yesno != "y" && yesno != "Y" )
       {
